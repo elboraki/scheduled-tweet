@@ -1,0 +1,6 @@
+<p>
+  <% if @user %>
+    Welcome logged as <%= @user.email %>
+    <%= link_to 'logout', logout_path , class: "btn btn-primary" , method: :delete %>
+  <% end %>
+</p>

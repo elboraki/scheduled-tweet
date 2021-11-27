@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   post 'sign_up', to: 'registrations#create'
 
-  root 'pages#home'
+  delete 'logout', to: 'sessions#destroy'
+  get 'main', to: 'main#index'
+
+  root to: 'main#index'
 
   get 'about', to: 'pages#about'
 end
