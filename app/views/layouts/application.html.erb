@@ -12,8 +12,13 @@
     <%= render partial: "shared/navbar" %>
     <div class="container p-2">
       <% if flash[:notice] %>
-        <div class="alert-danger">
+        <div class=" alert alert-warning">
           <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <% if flash[:alert] %>
+        <div class="alert alert-danger">
+          <%= flash[:alert] %>
         </div>
       <% end %>
       <%= yield %>
